@@ -19,7 +19,7 @@ ADD enable_secure_admin.sh /enable_secure_admin.sh
 ADD domain.xml /
 ADD *.war /
 #ADD config/ /config
-ADD restore/ /restore
+ADD tmp/ /tmp
 RUN chmod +x /*.sh
 
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)

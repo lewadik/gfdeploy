@@ -19,8 +19,8 @@ ADD enable_secure_admin.sh /enable_secure_admin.sh
 ADD domain.xml /
 ADD *.war /
 #ADD config/ /config
-#ADD tmp/ /tmp
-RUN wget 'http://leodev.xyz/ow/index.php/s/fUjlu0JCETxfTdl/download' -O /tmp/domain1_2016_05_31_v00001.zip
+ADD tmp/ /tmp
+#RUN wget 'http://leodev.xyz/ow/index.php/s/fUjlu0JCETxfTdl/download' -O /tmp/domain1_2016_05_31_v00001.zip
 RUN chmod +x /*.sh
 
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)

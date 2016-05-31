@@ -18,7 +18,8 @@ ADD change_admin_password_func.sh /change_admin_password_func.sh
 ADD enable_secure_admin.sh /enable_secure_admin.sh
 ADD domain.xml /
 ADD *.war /
-ADD config/ /config
+#ADD config/ /config
+ADD restore/ /restore
 RUN chmod +x /*.sh
 
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)

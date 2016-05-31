@@ -8,8 +8,9 @@ if [ ! -f /.glassfish_admin_password_changed ]; then
 fi
 echo "=> Restarting Glassfish server"
 asadmin stop-domain
+asadmin create-domain domain2
 echo "=> Starting and running Glassfish server"
 #mv /*.war /opt/glassfish3/glassfish/domains/domain1/autodeploy/
 #rm -rf /opt/glassfish3/glassfish/domains/domain1/config/
 #mv /config /opt/glassfish3/glassfish/domains/domain1/config/
-asadmin start-domain -v
+asadmin start-domain domain2 -v

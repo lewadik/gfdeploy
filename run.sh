@@ -10,6 +10,6 @@ echo "=> Restarting Glassfish server"
 asadmin stop-domain
 echo "=> Starting and running Glassfish server"
 #mv /*.war /opt/glassfish3/glassfish/domains/domain1/autodeploy/
-rm -rf /opt/glassfish3/glassfish/domains/domain1/config/
-mv /config /opt/glassfish3/glassfish/domains/domain1/config/
+#rm -rf /opt/glassfish3/glassfish/domains/domain1/config/
+#mv /config /opt/glassfish3/glassfish/domains/domain1/config/
 asadmin start-domain -v

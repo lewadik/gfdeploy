@@ -3,7 +3,7 @@ Docker Glassfish-3.1.2
 
 Usage
 ------
-	git clone https://github.com/lewadik/docker-glassfish3-1.git deploywar
+	git clone https://github.com/lewadik/gfdeploy.git deploywar
 	cd deploywar/
 	docker build -t deploywar .
 	# to check if all are good during image start-up you can use:

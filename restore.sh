@@ -15,8 +15,5 @@ mkdir instance1-dataexportapi/ && mkdir instance1-inwardservice/ && mkdir instan
 mkdir instance1-system-service/ && mkdir instance1-cis/ && mkdir instance1-fin/ && mkdir instance1-cashier/ && \
 mkdir instance1-gms && mkdir instance1-bingoengine/
 
-spawn asadmin --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice
-expect "Do you trust the above certificate"
-send "y\n"
-expect eof
-asadmin --secure --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-gms
+expect -c 'spawn asadmin --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice; expect "Do you trust the above certificate" {send -- "y\r"}'
+expect -c 'spawn asadmin --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-gms; expect "Do you trust the above certificate" {send -- "y\r"}'

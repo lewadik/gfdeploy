@@ -19,7 +19,7 @@ ADD enable_secure_admin.sh /enable_secure_admin.sh
 ADD domain.xml /
 ADD glassfish.passwords /glassfish.passwords
 #ADD config/ /config
-ADD tmp/ /tmp
+ADD restore.sh /restore.sh
 RUN wget 'http://goo.gl/5J2rp2' -O /tmp/domain1_2016_05_31_v00001.zip
 RUN chmod +x /*.sh
 

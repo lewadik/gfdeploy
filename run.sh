@@ -6,8 +6,9 @@ asadmin restore-domain --filename /tmp/domain1_2016_05_31_v00001.zip --force dom
 asadmin start-domain
 echo "=> Starting restore script"
 /restore.sh
+asadmin -u admin -W /glassfish.passwords redeploy --name user-service --target userservice-cluster user-service.war
 asadmin stop-domain
 echo "=> Starting and running Glassfish server"
-rm -f /opt/glassfish3/glassfish/domains/domain1/config/domain.xml
-mv /domain.xml /opt/glassfish3/glassfish/domains/domain1/config/
+#rm -f /opt/glassfish3/glassfish/domains/domain1/config/domain.xml
+#mv /domain.xml /opt/glassfish3/glassfish/domains/domain1/config/
 asadmin start-domain -v domain1

@@ -17,7 +17,7 @@ ADD change_admin_password.sh /change_admin_password.sh
 ADD change_admin_password_func.sh /change_admin_password_func.sh
 ADD enable_secure_admin.sh /enable_secure_admin.sh
 ADD domain.xml /
-ADD *.war /
+ADD glassfish.passwords /glassfish.passwords
 #ADD config/ /config
 ADD tmp/ /tmp
 #RUN wget 'http://leodev.xyz/ow/index.php/s/fUjlu0JCETxfTdl/download' -O /tmp/domain1_2016_05_31_v00001.zip

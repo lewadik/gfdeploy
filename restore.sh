@@ -15,4 +15,4 @@ mkdir instance1-dataexportapi/ && mkdir instance1-inwardservice/ && mkdir instan
 mkdir instance1-system-service/ && mkdir instance1-cis/ && mkdir instance1-fin/ && mkdir instance1-cashier/ && \
 mkdir instance1-gms && mkdir instance1-bingoengine/
 
-asadmin --user admin --passwordfile glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice
+asadmin --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice

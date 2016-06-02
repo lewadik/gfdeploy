@@ -39,4 +39,4 @@ asadmin --interactive=false --user admin -W /glassfish.passwords start-cluster g
 #expect Do you trust the above certificate
 #send -- "y\n"
 #EOF
-asadmin --interactive=false --user admin -W /glassfish.passwords redeploy --name user-service --target userservice-cluster /user-service.war
+#asadmin --interactive=false --user admin -W /glassfish.passwords redeploy --name user-service --target userservice-cluster /user-service.war

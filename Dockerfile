@@ -24,6 +24,6 @@ RUN wget 'http://goo.gl/5J2rp2' -O /tmp/domain1_2016_05_31_v00001.zip
 RUN chmod +x /*.sh
 
 # 4848 (administration), 8080 (HTTP listener), 8181 (HTTPS listener)
-EXPOSE 4848 8080 8181
+EXPOSE 4848 8080 8181 28080 28181
 
 CMD ["/run.sh"]

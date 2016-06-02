@@ -16,7 +16,8 @@ mkdir instance1-gms && mkdir instance1-bingoengine/
 
 asadmin --interactive=false --user admin -W /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice
 asadmin --interactive=false --user admin -W /glassfish.passwords start-cluster userservice-cluster
-#asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster gs2c-cluster
+asadmin --interactive=false --user admin -W /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-gs2c
+asadmin --interactive=false --user admin -W /glassfish.passwords start-cluster gs2c-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster userservice-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster dataexportapi-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster inwardservice-cluster

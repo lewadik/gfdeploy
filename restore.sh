@@ -14,8 +14,8 @@ mkdir instance1-dataexportapi/ && mkdir instance1-inwardservice/ && mkdir instan
 mkdir instance1-system-service/ && mkdir instance1-cis/ && mkdir instance1-fin/ && mkdir instance1-cashier/ && \
 mkdir instance1-gms && mkdir instance1-bingoengine/
 
-asadmin --interactive=false --user admin --passwordfile /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice
-asadmin --interactive=false --user admin --passwordfile /glassfish.passwords start-cluster userservice-cluster
+asadmin --interactive=false --user admin -W /glassfish.passwords start-local-instance --node localhost-domain1 --sync full instance1-userservice
+asadmin --interactive=false --user admin -W /glassfish.passwords start-cluster userservice-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster gs2c-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster userservice-cluster
 #asadmin --user admin --passwordfile /glassfish.passwords --interactive=false start-cluster dataexportapi-cluster
@@ -38,4 +38,4 @@ asadmin --interactive=false --user admin --passwordfile /glassfish.passwords sta
 #expect Do you trust the above certificate
 #send -- "y\n"
 #EOF
-#asadmin -u admin -W /glassfish.passwords redeploy --name user-service --target userservice-cluster user-service.war
+asadmin --interactive=false --user admin -W /glassfish.passwords redeploy --name user-service --target userservice-cluster user-service.war

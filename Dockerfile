@@ -4,7 +4,7 @@ MAINTAINER Ganduruu.B <mr.jojo8@gmail.com>
 
 RUN apt-get update && \
     apt-get install -y wget unzip pwgen expect && \
-    wget http://download.oracle.com/glassfish/3.1.2.2/release/glassfish-3.1.2.2.zip && \
+    wget --no-check-certificate http://download.oracle.com/glassfish/3.1.2.2/release/glassfish-3.1.2.2.zip && \
     unzip glassfish-3.1.2.2.zip -d /opt && \
     rm glassfish-3.1.2.2.zip && \
     apt-get clean && \

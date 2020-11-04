@@ -14,3 +14,5 @@ Usage
 Memory limit /this case : 2GB/
 
 	docker run -d -m 2GB-p 4848:4848 -p 8080:8080 -p 8181:8181 deploywar
+
+	test commit
